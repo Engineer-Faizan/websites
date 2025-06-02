@@ -1,0 +1,259 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and general layout */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("cake-background.jpg");  /* Background image */
+    background-size: cover;  /* Full-screen background */
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: #333;
+}
+
+/* Header and Navigation Bar */
+header {
+    background-color: #ff7f7f;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #ff4d4d;
+}
+
+/* Cart Button */
+.cart {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.cart button {
+    padding: 10px;
+    background-color: #fff;
+    color: #ff7f7f;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.cart button:hover {
+    background-color: #ffb3b3;
+}
+
+/* Main content layout */
+main {
+    padding: 20px;
+}
+
+/* Cake section */
+.cakes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.cake {
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 220px;
+}
+
+.cake img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.cake h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.cake p {
+    color: #555;
+}
+
+.add-to-cart {
+    background-color: #ff7f7f;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #ff4d4d;
+}
+
+/* Cake Customization */
+.customize-section {
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.customize-section h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.customize-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.customize-section label {
+    margin-top: 10px;
+    color: #555;
+    font-size: 1em;
+}
+
+.customize-section input,
+.customize-section select,
+.customize-section textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.customize-section button {
+    background-color: #ff7f7f;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.customize-section button:hover {
+    background-color: #ff4d4d;
+}
+
+/* Cart Section */
+.cart-section {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.cart-section h2 {
+    color: #333;
+    font-size: 1.5em;
+}
+
+.cart-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart-section li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-section button {
+    background-color: #ff7f7f;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-section button:hover {
+    background-color: #ff4d4d;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ff7f7f;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Cake Customization Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+select, input[type="text"], button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.summary {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}

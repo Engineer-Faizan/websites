@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="C:\Users\Abdul\Desktop\websites\cakeshop">
+</head>
+
+<body>
+    <header>
+        <h1>Cake Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cakes">Cakes</a></li>
+                <li><a href="#customize">Customize</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="cart">
+            <button onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="cakes" class="cakes">
+            <div class="cake" id="cake1">
+                <img src="choclate cake.jpeg" alt="Chocolate Cake">
+                <h3>Chocolate Cake</h3>
+                <p>$15.99</p>
+                <button class="add-to-cart" onclick="addToCart('Chocolate Cake', 15.99)">Add to Cart</button>
+            </div>
+            <div class="cake" id="cake2">
+                <img src="cake2.png" alt="Vanilla Cake">
+                <h3>Vanilla Cake</h3>
+                <p>$12.99</p>
+                <button class="add-to-cart" onclick="addToCart('Vanilla Cake', 12.99)">Add to Cart</button>
+            </div>
+            <div class="cake" id="cake3">
+                <img src="cake3.png" alt="Strawberry Cake">
+                <h3>Strawberry Cake</h3>
+                <p>$18.99</p>
+                <button class="add-to-cart" onclick="addToCart('Strawberry Cake', 18.99)">Add to Cart</button>
+            </div>
+        </section>
+        <!-- Cake Customization Form -->
+        <form id="cakeForm">
+            <!-- Cake Size Selection -->
+            <label for="cakeSize">Choose Cake Size:</label>
+            <select id="cakeSize" name="cakeSize">
+                <option value="6" data-price="15">6 inches ($15)</option>
+                <option value="8" data-price="20">8 inches ($20)</option>
+                <option value="10" data-price="25">10 inches ($25)</option>
+                <option value="12" data-price="30">12 inches ($30)</option>
+            </select>
+
+            <!-- Cake Flavor Selection -->
+            <label for="cakeFlavor">Choose Cake Flavor:</label>
+            <select id="cakeFlavor" name="cakeFlavor">
+                <option value="vanilla" data-price="0">Vanilla (No extra charge)</option>
+                <option value="chocolate" data-price="5">Chocolate (+$5)</option>
+                <option value="redVelvet" data-price="7">Red Velvet (+$7)</option>
+                <option value="lemon" data-price="5">Lemon (+$5)</option>
+                <option value="carrot" data-price="5">Carrot (+$5)</option>
+            </select>
+
+            <!-- Frosting Selection -->
+            <label for="frostingType">Choose Frosting:</label>
+            <select id="frostingType" name="frostingType">
+                <option value="buttercream" data-price="0">Buttercream (No extra charge)</option>
+                <option value="whippedCream" data-price="2">Whipped Cream (+$2)</option>
+                <option value="ganache" data-price="3">Ganache (+$3)</option>
+                <option value="fondant" data-price="4">Fondant (+$4)</option>
+            </select>
+            <!-- Decorations -->
+            <label for="decorations">Add Decorations:</label>
+            <input type="checkbox" id="edibleFlowers" name="decorations" value="edibleFlowers" data-price="10">
+            <label for="edibleFlowers">Edible Flowers (+$10)</label>
+            <input type="checkbox" id="sprinkles" name="decorations" value="sprinkles" data-price="3">
+            <label for="sprinkles">Sprinkles (+$3)</label>
+            <input type="checkbox" id="customToppers" name="decorations" value="customToppers" data-price="15">
+            <label for="customToppers">Custom Toppers (+$15)</label>
+
+            <!-- Special Message -->
+            <label for="specialMessage">Special Message on Cake:</label>
+            <input type="text" id="specialMessage" name="specialMessage" placeholder="Enter message">
+
+            <button type="submit" id="submitBtn">Submit Customization</button>
+        </form>
+
+        <!-- Customization Summary and Total Cost Display -->
+        <div id="summary" class="summary"></div>
+        
+        <section id="cart-section" class="cart-section">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="total-price">0.00</span></p>
+            <button id="checkout-btn">Checkout</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cake Shop. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
